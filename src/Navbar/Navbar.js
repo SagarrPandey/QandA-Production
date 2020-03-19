@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Navbar,Nav,Container,Form,Button,Image} from 'react-bootstrap';
+import {Link} from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import SignupModal from './Modals/signUpModal';
 import LoginModal from './Modals/loginModal';
@@ -52,8 +53,8 @@ class NavbarComponent extends Component {
                         <Form.Control size="sm"  type="text" placeholder="Search"/>
                     </Form>
                 <Nav className="ml-auto">
-                  <Nav.Link href="/">Home</Nav.Link>
-                  <Nav.Link href="QandA">QandA</Nav.Link>
+                  <Nav.Link><Link to="/">Home</Link></Nav.Link>
+                  <Nav.Link href="QandA"><Link to="QandA">QandA</Link></Nav.Link>
                   <Nav.Link data-toggle="modal" className="text-primary" onClick={this.showLoginModal}>login</Nav.Link>
                   <Nav.Link>
                             <Button size="sm" variant="outline-primary" onClick={this.showSignupModal}>Sign up</Button>
