@@ -53,14 +53,14 @@ class NavbarComponent extends Component {
                         <Form.Control size="sm"  type="text" placeholder="Search"/>
                     </Form>
                 <Nav className="ml-auto">
-                  <Nav.Link><Link to="/">Home</Link></Nav.Link>
-                  <Nav.Link href="QandA"><Link to="QandA">QandA</Link></Nav.Link>
+                  <Nav.Link href="/">Home</Nav.Link>
+                  <Nav.Link href="QandA">QandA</Nav.Link>
                   <Nav.Link data-toggle="modal" className="text-primary" onClick={this.showLoginModal}>login</Nav.Link>
                   <Nav.Link>
                             <Button size="sm" variant="outline-primary" onClick={this.showSignupModal}>Sign up</Button>
                   </Nav.Link> 
-                  <Nav.Link  data-toggle="modal" data-target="#ignup" href='user'>
-                        <Image src={UserImage}   className="nav-user-img" alt=""/>
+                  <Nav.Link  data-toggle="modal">
+                         <Link to="user"><Image src={UserImage} className="nav-user-img" alt=""/></Link>
                   </Nav.Link>
                 </Nav>
               </Navbar.Collapse>
@@ -70,7 +70,7 @@ class NavbarComponent extends Component {
           <Modal show={this.state.login} onHide={this.hideModal}>
               {this.state.modalbody}
               <Modal.Footer>
-              <Button href="user" variant="primary" onClick={this.hideModal} block>Sign up</Button>
+              <Button  variant="primary" onClick={this.hideModal} block>Sign up</Button>
             </Modal.Footer>
             <Modal.Footer>
               <Button variant="warning" onClick={this.hideModal} block>Cancel</Button>

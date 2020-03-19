@@ -6,3 +6,22 @@
     margin-top: -5px;
     border-radius: 50%;
 }
+Link:link {
+    text-decoration: none;
+  }
+  
+  Link:visited {
+    text-decoration: none;
+  }
+  
+  Link:hover {
+    text-decoration: none;
+  }
+  
+  Link:active {
+    text-decoration: none;
+  }
+
+Link{
+    font-style: italic;
+}
